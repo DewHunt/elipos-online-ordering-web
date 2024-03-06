@@ -1,0 +1,33 @@
+
+
+.toolbar-background{
+    background:red;
+}
+
+.common-background{
+    background: red;
+}
+
+.menu-toogle-icon{
+    color:#ffffff;
+}
+.back-button-icon{
+    color: #ffffff;
+}
+.btn-confirm{
+    background: green;
+    color: #ffffff;
+
+}
+.btn-cancel{
+    background: red;
+    color: #ffffff;
+}
+
+page-menu .product .price-text{
+    color: red;
+}
+page-menu .amount-footer{
+    background: skyblue;
+    color: #ffffff;
+}

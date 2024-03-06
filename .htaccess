@@ -1,0 +1,9 @@
+
+ Options +FollowSymLinks
+  RewriteEngine On
+  Header set Access-Control-Allow-Origin *
+  RewriteBase /demo.elipos
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php?/$1 [L]
+ RewriteRule .* - [e=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

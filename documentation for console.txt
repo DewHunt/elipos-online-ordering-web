@@ -1,0 +1,20 @@
+# Controllers
+  1. demo.elipos/application/controllers/api/Get_orders/__construct
+  2. demo.elipos/application/controllers/api/Get_orders/get_all_orders_by_order_status()
+  3. demo.elipos/application/controllers/api/Get_orders/get_details_by_order_id($id = 0)
+  4. demo.elipos/application/controllers/api/Customers/get_top_customer_lists()
+  5. demo.elipos/application/controllers/api/Customers/get_all_customers()
+  6. demo.elipos/application/controllers/api/Product/get_top_customer_lists/get_top_selling_product_lists()
+     (Copy the 'Product.php' controller file and paste in the following directory 'demo.elipos/application/controllers/api/')
+
+# Models
+  1. demo.elipos/application/models/Customer_Model/get_customer_info_by_id($id = 0)
+  2. demo.elipos/application/models/Customer_Model/get_all_customers_for_api()
+  3. demo.elipos/application/models/Order_Deals_Model/getDealsByOrderId($order_id)
+  4. demo.elipos/application/models/Order_details_Model/get_top_sellings_product_info($limit = 0,$from_date = '',$to_date = '')
+  5. demo.elipos/application/models/Order_information_Model/get_orders_info_by_date_and_order_status($order_status = '',$order_time = '',$start_date = '',$end_date = '')
+  6. demo.elipos/application/models/Order_information_Model/get_top_customer_info($limit = 5,$start_date = null,$end_date = null)
+
+# Database
+  1. If the 'is_refunded' column is not found in the 'order_information' table, then run the following MySQL query for creating this column
+	=> ALTER TABLE `order_information` ADD `is_refunded` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '0 for not refunded; 1 for refunded;' AFTER `surcharge`;

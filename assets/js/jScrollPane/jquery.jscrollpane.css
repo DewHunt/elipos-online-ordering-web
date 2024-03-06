@@ -1,0 +1,113 @@
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+#cart-body
+{
+	width:100%;
+	max-height:250px;
+	
+}
+.jspContainer {
+    
+    overflow: hidden;
+    position: relative;
+}
+.jspPane {
+    position: absolute;
+	width:224px;
+}
+.jspPane .order-content {
+    padding-right: 0;
+}
+.jspVerticalBar {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 98%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12px;
+}
+.jspHorizontalBar {
+    background: none repeat scroll 0 0 #FF0000;
+    bottom: 0;
+    height: 16px;
+    left: 0;
+    position: absolute;
+	display:none;
+    width: 100%;
+}
+.jspVerticalBar *, .jspHorizontalBar * {
+    margin: 0;
+    padding: 0;
+}
+.jspCap {
+    display: none;
+}
+.jspHorizontalBar .jspCap {
+    float: left;
+}
+.jspTrack {
+    background: none repeat scroll 0 0 #B6B6B6;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.6) inset;
+    position: relative;
+}
+.jspDrag {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 4px 0 4px rgba(0, 0, 0, 0.2) inset, 0 0 2px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    left: 2px;
+    position: relative;
+    top: 0;
+    width: 8px;
+}
+.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag {
+    float: left;
+    height: 100%;
+}
+.jspArrow {
+    background: none repeat scroll 0 0 #50506D;
+    cursor: pointer;
+    display: block;
+    text-indent: -20000px;
+}
+.jspArrow.jspDisabled {
+    background: none repeat scroll 0 0 #80808D;
+    cursor: default;
+}
+.jspVerticalBar .jspArrow {
+    height: 16px;
+}
+.jspVerticalBar .jspArrowUp {
+    background: url("../../img/scrollbar/arrow-up-blue.html") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 16px;
+}
+.jspVerticalBar .jspArrowDown {
+    background: url("../../img/scrollbar/arrow-down-blue.html") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 21px;
+}
+.jspVerticalBar .jspArrowUp.jspDisabled {
+    background: url("../../img/scrollbar/arrow-up-disabled-blue.html") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 16px;
+}
+.jspVerticalBar .jspArrowDown.jspDisabled {
+    background: url("../../img/scrollbar/arrow-down-disabled-blue.html") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 21px;
+}
+.jspHorizontalBar .jspArrow {
+    float: left;
+    height: 100%;
+    width: 16px;
+}
+.jspVerticalBar .jspArrow:focus {
+    outline: medium none;
+}
+.jspCorner {
+    background: none repeat scroll 0 0 #EEEEF4;
+    float: left;
+    height: 100%;
+}

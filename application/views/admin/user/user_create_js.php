@@ -1,0 +1,47 @@
+<script>
+    $(document).ready(function () {
+
+        $("form[name='user_save_form']").validate({
+            rules: {
+                name: "required",
+                user_name: "required",
+                role: "required",
+                email: {
+                    required: true,
+                    email: true,
+                },
+                password: {
+                    required: true,
+                    minlength: 5,
+                },
+                confirm_password: {
+                    required: true,
+                    minlength: 5,
+                    equalTo: '#password',
+                }
+            },
+            messages: {
+                //name: "Please Enter Name",
+                name: "Please Enter Name",
+                user_name: "Please Enter User Name",
+                role: "Please Select User type",
+                email: {
+                    required: "Please Enter Email Address",
+                    email: "Enter a Valid Email Address",
+                },
+                password: {
+                    required: "Please Enter a password",
+                    minlength: "Password must be at least 5 characters long",
+                },
+                confirm_password: {
+                    required: "Please Enter a confirm password",
+                    minlength: "Your password must be at least 5 characters long",
+                    equalTo: "Password doest not match",
+                }
+            },
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+    });
+</script>

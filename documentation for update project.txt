@@ -1,0 +1,25 @@
+=> `isEdited` field needs to update in the following tables
+	+ `category`
+	+ `fooditem`
+	+ `modifier_category`
+	+ `selectionitems`
+	+ `sidedishes`
+
+=> `is_half_and_half` field needs to update in the following tables
+	+ `deals`
+
+=> These tables needs to add to database
+	+ `feedbacks`
+	+ `login_log_details`
+	+ `promo_offers`
+	+ `sagepay_transaction`
+
+=> These files needs to add to the project
+	+ feedback_model.php
+	+ login_log_details.php
+	+ promo_offers_model.php
+	+ sagepay_transaction_model.php
+	+ customer_notification_model.php
+	+ api_controller.php
+
+=> Change the php version to 7.1 in server.

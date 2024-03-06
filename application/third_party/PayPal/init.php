@@ -1,0 +1,67 @@
+<?php
+require(dirname(__FILE__) . '/Exception/PayPalConfigurationException.php');
+require(dirname(__FILE__) . '/Exception/PayPalConnectionException.php');
+require(dirname(__FILE__) . '/Exception/PayPalInvalidCredentialException.php');
+require(dirname(__FILE__) . '/Exception/PayPalMissingCredentialException.php');
+require(dirname(__FILE__) . '/Handler/IPayPalHandler.php');
+require(dirname(__FILE__) . '/Handler/OauthHandler.php');
+require(dirname(__FILE__) . '/Handler/RestHandler.php');
+require(dirname(__FILE__) . '/Core/PayPalHttpConnection.php');
+require(dirname(__FILE__) . '/Core/PayPalConstants.php');
+require(dirname(__FILE__) . '/Core/PayPalHttpConfig.php');
+require(dirname(__FILE__) . '/Core/PayPalConfigManager.php');
+require(dirname(__FILE__) . '/Core/PayPalLoggingManager.php');
+require(dirname(__FILE__) . '/Psr/Log/LogLevel.php');
+require(dirname(__FILE__) . '/Psr/Log/LoggerInterface.php');
+require(dirname(__FILE__) . '/Psr/Log/AbstractLogger.php');
+require(dirname(__FILE__) . '/Log/PayPalLogger.php');
+require(dirname(__FILE__) . '/Log/PayPalLogFactory.php');
+require(dirname(__FILE__) . '/Log/PayPalDefaultLogFactory.php');
+
+require(dirname(__FILE__) . '/Security/Cipher.php');
+require(dirname(__FILE__) . '/Rest/IResource.php');
+require(dirname(__FILE__) . '/Cache/AuthorizationCache.php');
+require(dirname(__FILE__) . '/Common/ArrayUtil.php');
+require(dirname(__FILE__) . '/Common/ReflectionUtil.php');
+require(dirname(__FILE__) . '/Common/PayPalUserAgent.php');
+require(dirname(__FILE__) . '/Common/PayPalModel.php');
+require(dirname(__FILE__) . '/Common/PayPalResourceModel.php');
+require(dirname(__FILE__) . '/Auth/OAuthTokenCredential.php');
+require(dirname(__FILE__) . '/Rest/ApiContext.php');
+require(dirname(__FILE__) . '/Converter/FormatConverter.php');
+require(dirname(__FILE__) . '/Validation/UrlValidator.php');
+require(dirname(__FILE__) . '/Validation/JsonValidator.php');
+require(dirname(__FILE__) . '/Validation/NumericValidator.php');
+require(dirname(__FILE__) . '/Transport/PayPalRestCall.php');
+require(dirname(__FILE__) . '/Api/ProcessorResponse.php');
+require(dirname(__FILE__) . '/Api/FmfDetails.php');
+require(dirname(__FILE__) . '/Api/Links.php');
+require(dirname(__FILE__) . '/Api/RelatedResources.php');
+require(dirname(__FILE__) . '/Api/Sale.php');
+require(dirname(__FILE__) . '/Api/CreditCard.php');
+require(dirname(__FILE__) . '/Api/CartBase.php');
+require(dirname(__FILE__) . '/Api/TransactionBase.php');
+require(dirname(__FILE__) . '/Api/Transaction.php');
+require(dirname(__FILE__) . '/Api/Details.php');
+require(dirname(__FILE__) . '/Api/ItemList.php');
+require(dirname(__FILE__) . '/Api/Item.php');
+require(dirname(__FILE__) . '/Api/Payee.php');
+require(dirname(__FILE__) . '/Api/Payer.php');
+require(dirname(__FILE__) . '/Api/FundingInstrument.php');
+require(dirname(__FILE__) . '/Api/Amount.php');
+require(dirname(__FILE__) . '/Api/Payment.php');
+require(dirname(__FILE__) . '/Api/PaymentCard.php');
+require(dirname(__FILE__) . '/Api/RedirectUrls.php');
+require(dirname(__FILE__) . '/Validation/ArgumentValidator.php');
+require(dirname(__FILE__) . '/Api/PayerInfo.php');
+require(dirname(__FILE__) . '/Api/BaseAddress.php');
+require(dirname(__FILE__) . '/Api/Address.php');
+require(dirname(__FILE__) . '/Api/ShippingAddress.php');
+require(dirname(__FILE__) . '/Api/PaymentExecution.php');
+require(dirname(__FILE__) . '/Api/Order.php');
+require(dirname(__FILE__) . '/Api/Capture.php');
+require(dirname(__FILE__) . '/Api/Authorization.php');
+require(dirname(__FILE__) . '/Api/Currency.php');
+
+
+

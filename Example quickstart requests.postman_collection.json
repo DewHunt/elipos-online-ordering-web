@@ -1,0 +1,208 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Example quickstart requests",
+		"_postman_id": "8bb13d4a-108c-49a9-9674-8d8cd054ee76",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Merchant",
+			"request": {
+				"url": {
+					"raw": "https://api.test.pay360evolve.com/demo/pf-api-gateway/apiGateway/merchant/merchants?createApplication=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"test",
+						"pay360evolve",
+						"com"
+					],
+					"path": [
+						"demo",
+						"pf-api-gateway",
+						"apiGateway",
+						"merchant",
+						"merchants"
+					],
+					"query": [
+						{
+							"key": "createApplication",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "API_KEY",
+						"value": "43833204d2284d979dff80f39f0e535b",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"isvId\": \"11001531\",\r\n  \"type\": \"GENERIC\",\r\n  \"organizationDetails\": {\r\n    \"legalName\": \"LM10\"\r\n    }\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Merchant",
+			"request": {
+				"url": "https://api.test.pay360evolve.com/demo/pf-api-gateway/apiGateway/merchant/merchants/11001631",
+				"method": "GET",
+				"header": [
+					{
+						"key": "API_KEY",
+						"value": "43833204d2284d979dff80f39f0e535b",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Merchants",
+			"request": {
+				"url": "https://api.test.pay360evolve.com/demo/pf-api-gateway/apiGateway/merchant/merchants/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "API_KEY",
+						"value": "<ISV Admin API key>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"url": {
+					"raw": "https://api.test.pay360evolve.com/demo/pf-api-gateway/apiGateway/user-account/user-account/userAccounts?invitation=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"test",
+						"pay360evolve",
+						"com"
+					],
+					"path": [
+						"demo",
+						"pf-api-gateway",
+						"apiGateway",
+						"user-account",
+						"user-account",
+						"userAccounts"
+					],
+					"query": [
+						{
+							"key": "invitation",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "API_KEY",
+						"value": "43833204d2284d979dff80f39f0e535b",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"deb.giantssoft@gmail.com\",\r\n  \"authorities\": [\r\n    {\r\n      \"scope\": \"11001531/11001631\",\r\n      \"roles\": [\"MERCHANT_ADMIN_PARTNER_INVITE\"]\r\n    }\r\n  ],\r\n  \"name\":\"deb_gs\",\r\n  \"idp\":\"Pay360\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Application Status",
+			"request": {
+				"url": "https://api.test.pay360evolve.com/demo/pf-api-gateway/apiGateway/merchant/merchants/11001631/applications",
+				"method": "GET",
+				"header": [
+					{
+						"key": "API_KEY",
+						"value": "43833204d2284d979dff80f39f0e535b",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Payment Request",
+			"request": {
+				"url": "https://secure.test.pay360evolve.com/api/v1/merchants/11001531/transactions/payments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "5240988991126893881.Q4XYMHRLYG20MBCIZY0GUWN3S",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n  \"customer\": {\r\n    \"address\": {\r\n      \"city\": \"Manchester\",\r\n      \"countryCode\": \"GBR\",\r\n      \"line1\": \"Flat 1/A\",\r\n      \"line2\": \"Princess\",\r\n      \"line3\": \"string\",\r\n      \"line4\": \"string\",\r\n      \"postcode\": \"M1 1BT\",\r\n      \"region\": \"North West\"\r\n    },\r\n    \"customerId\": \"customer-00001\",\r\n    \"emailAddress\": \"a.customer@test.com\",\r\n    \"name\": \"A Payer\",\r\n    \"telephone\": \"0000-000-0000\"\r\n  },\r\n  \"delivery\": {\r\n    \"deferredShipping\": true,\r\n    \"shippingAddress\": {\r\n      \"city\": \"Manchester\",\r\n      \"countryCode\": \"GBR\",\r\n      \"line1\": \"Flat 1/A\",\r\n      \"line2\": \"Princes\",\r\n      \"line3\": \"string\",\r\n      \"line4\": \"string\",\r\n      \"postcode\": \"M1 1BT\",\r\n      \"region\": \"North West\"\r\n    }\r\n  },\r\n\r\n  \"emailNotifications\": [\r\n    {\r\n      \"address\": \"a.customer@test.com\",\r\n      \"type\": \"RECEIPT\"\r\n    }\r\n  ],\r\n  \"paymentMethod\": {\r\n    \"billingAddress\": {\r\n      \"city\": \"Manchester\",\r\n      \"countryCode\": \"GBR\",\r\n      \"line1\": \"Flat 1/A\",\r\n      \"line2\": \"Princess\",\r\n      \"line3\": \"string\",\r\n      \"line4\": \"string\",\r\n      \"postcode\": \"M1 1BT\",\r\n      \"region\": \"North West\"\r\n    },\r\n    \"billingEmail\": \"a.customer@test.com\",\r\n    \"card\": {\r\n      \"cardHolderName\": \"A Cardholder\",\r\n      \"commerceType\": \"ECOMM\",\r\n      \"cv2\": 747,\r\n      \"do3DSecure\": true,\r\n      \"entryType\": \"ECOMM\",\r\n      \"expiryMonth\": \"05\",\r\n      \"expiryYear\": 30,\r\n      \"issueNumber\": 1,\r\n      \"merchantCategoryCode\": 8299,\r\n      \"paRes\": \"3DS_PA_RESPONSE\",\r\n      \"pan\": 4111111111111111,\r\n      \"startDate\": \"0120\",\r\n      \"token\": \"UNIQUE_STORED_CARD_TOKEN\"\r\n    },\r\n    \"gateway\": {\r\n      \"acceptMethods\": [\r\n        \"card\",\r\n        \"paypal\",\r\n        \"pbba\",\r\n        \"visacheckout\"\r\n      ],\r\n      \"returnUrl\": \"https://www.merchantsite.com?return=true\"\r\n    },\r\n    \"methodId\": \"GATEWAY\",\r\n    \"provider\": \"SBS\",\r\n    \"saveMethod\": \"NO\",\r\n \r\n\r\n    \"test\": {\r\n      \"async\": true,\r\n      \"asyncDelay\": 0,\r\n      \"authCode\": 0,\r\n      \"error\": true,\r\n      \"name\": \"string\",\r\n      \"test3ds\": true,\r\n      \"threeDSData\": \"string\"\r\n    }\r\n  },\r\n \r\n \r\n  \"remittance\": {\r\n    \"merchantId\": 11001637,\r\n    \"remittanceGroup\": \"Field trip\"\r\n  },\r\n  \"transaction\": {\r\n    \"amount\": 99,\r\n    \"capture\": true,\r\n    \"channel\": \"WEB\",\r\n    \"currency\": \"GBP\",\r\n    \"description\": \"Payment for fees\",\r\n    \"fraudChecks\": \"NONE\",\r\n    \"merchantReference\": \"reference-00001\",\r\n    \"recurring\": \"NONE\",\r\n    \"recurringType\": \"CONTINUOUS\",\r\n    \"sequenceId\": 543,\r\n    \"submit\": true,\r\n    \"transactionDateTime\": \"2021-04-10T10:45:19Z\",\r\n    \"uniqueMerchantReference\": \"uniqueReference-000001\"\r\n  }\r\n}\r\n\r\n\r\n\r\n// <ISV Id> : ISV Id, as you are processing the payment on behalf of the merchant\r\n// <remittanceMerchantId> : merchant ID for the merchant receiving the payment\r\n// <returnUrl> : the URL you want to return the cardholder to after payment has been completed"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Payment Status",
+			"request": {
+				"url": "https://secure.test.pay360evolve.com/api/v1/merchants/11001637/transactions/payments/44197/status",
+				"method": "GET",
+				"header": [
+					{
+						"key": "jwt",
+						"value": "5240988991126893881.Q4XYMHRLYG20MBCIZY0GUWN3S",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
